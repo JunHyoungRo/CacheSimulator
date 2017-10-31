@@ -1,8 +1,10 @@
-Dual-Core Cache Simulator
+Quard-Core Cache Simulator
 =======
 
-Written by Jesse Bannon
------------
+Rewritten by njsnacker. <<njsnacker@gmail.com>>  
+Modified **pthread to windows thread, dual-core to quard-core**  
+Original Source : https://github.com/jmbannon/CacheSimulator  
+
 
 ### Building and Compiling
 
@@ -16,13 +18,9 @@ To run the program, execute the executable by entering './cacheSimulator'.
 
 Within *CacheSimulator.h* are multiple defines that modify the memory heiarchy
 and metrics. Simply edit these values with respect to log base two if they are part of
-associated with the cache (latencies can be any positive integer). 
+associated with the cache (latencies can be any positive integer).
 
 ### Modifying the Address Trace file
 
-Modify the Address Trace file (.csv) within *CacheSimulator.h* by changing the 
+Modify the Address Trace file (.csv) within *CacheSimulator.h* by changing the
 **FILE_NAME** string.
-
-
-
-

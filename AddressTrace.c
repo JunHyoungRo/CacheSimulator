@@ -1,16 +1,3 @@
-/*
- ============================================================================
- Name        : AddressTrace.c
- Author      : Jesse Bannon
- Class       : TCSS 372 - Computer Architecture
- School      : University of Washington Tacoma
- Copyright   : Use only for educational purposes and do not modify file.
- Description : Contains all enums address structs used throughout the program
-               and conversions functions from unsigned integers to cache and
-               trace addresses.
- ============================================================================
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 

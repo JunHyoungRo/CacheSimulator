@@ -1,20 +1,9 @@
-/*
- ============================================================================
- Name        : CacheSimulator.h
- Author      : Jesse Bannon
- Class       : TCSS 372 - Computer Architecture
- School      : University of Washington Tacoma
- Copyright   : Use only for educational purposes and do not modify file.
- Description : Reads in a .csv of address traces and simulates a
-               five-level cache hierarchy and two CPUs.
- ============================================================================
- */
-
 #ifndef CACHESIMULATOR_H_
 #define CACHESIMULATOR_H_
 
 /* Cache line size in bytes (log base two). */
 #define CL_SIZE 16
+#define CPU_NUM 4
 
 /* Sizes in entries (log base two). */
 #define L1_SIZE 16
@@ -45,11 +34,11 @@ typedef struct thread_node {
 
 void readAddressTraces(void *info);
 /*  Takes in a pointer to a threadInfo struct and reads the addresses
-    from the .csv file fileName and assigns it to a cpu (int cpu).    
+    from the .csv file fileName and assigns it to a cpu (int cpu).
 */
 
 void printCacheMetrics();
-/* Prints all metrics recorded from readAddressTraces. 
+/* Prints all metrics recorded from readAddressTraces.
 */
 
 #endif

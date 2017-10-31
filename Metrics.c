@@ -1,14 +1,3 @@
-/*
- ============================================================================
- Name        : Main.c
- Author      : Jesse Bannon
- Class       : TCSS 372 - Computer Architecture
- School      : University of Washington Tacoma
- Copyright   : Use only for educational purposes and do not modify file.
- Description : Handles all metrics recorded during execution of the cache.
- ============================================================================
- */
-
 #include "Metrics.h"
 #include "CacheSimulator.h"
 
@@ -57,10 +46,10 @@ static int StoI = 0;
 void printMetrics() {
   printf("\n");
   printf("===========================================\n");
-  printf("DUAL-CORE CACHE SIMULATOR\n");
-  printf("by Jesse Bannon\n\n");
-  printf("TCSS 372 - Computer Architecture\n");
-  printf("University of Washington Tacoma\n");
+  printf("QUAD-CORE CACHE SIMULATOR\n");
+  printf("by 2013112003 노준형\n\n");
+  printf("CSE4034-02 Computer Architectures\n");
+  printf("University of Dongguk\n");
   printf("===========================================\n\n");
 
   printf("Total Latency:\n");
@@ -123,17 +112,23 @@ void hitMetrics(CACHE cacheHit, INST_TYPE inst_type, ADDR_TYPE addr_type) {
     switch(cacheHit) {
     case CPU0L1i_:
     case CPU1L1i_:
+	case CPU2L1i_:
+	case CPU3L1i_:
         TotalLatency += L1_LATENCY;
         ++L1iHit; return;
 
 
     case CPU0L1d_:
     case CPU1L1d_:
+	case CPU2L1d_:
+	case CPU3L1d_:
         TotalLatency += L1_LATENCY;
         ++L1dHit; return;
 
     case CPU0L2_:
     case CPU1L2_:
+	case CPU2L2_:
+	case CPU3L2_:
         TotalLatency += L2_LATENCY;
         L1miss(addr_type);
         ++L2Hit; return;

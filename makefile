@@ -1,4 +1,3 @@
-# TCSS 372 - Computer Architecture
 CC=gcc
 I=lpthread
 
@@ -20,5 +19,3 @@ Metrics.o: Metrics.c Metrics.h
 	$(CC) -c Metrics.c
 
 #Need dis
-	
-
